@@ -1,0 +1,21 @@
+{
+  "configurations": [
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "API sm-presigned:SMPresigned",
+      "invokeTarget": {
+        "target": "api",
+        "templatePath": "${workspaceFolder}/template.yaml",
+        "logicalId": "SMPresigned"
+      },
+      "api": {
+        "path": "/",
+        "httpMethod": "get",
+        "payload": {
+          "json": {}
+        }
+      }
+    }
+  ]
+}
